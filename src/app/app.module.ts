@@ -6,6 +6,7 @@ import { SharedModule } from './shared/shared.module';
 import { TaskdialogModule } from './taskdialog/taskdialog.module';
 
 
+
 @NgModule({
   declarations: [
     AppComponent
@@ -13,7 +14,8 @@ import { TaskdialogModule } from './taskdialog/taskdialog.module';
   imports: [
     BrowserModule,
     TaskdialogModule,
-    SharedModule
+    SharedModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
