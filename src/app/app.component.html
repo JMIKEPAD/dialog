@@ -1,2 +1,10 @@
 <button (click)="opendialog()" mat-fab>
   <mat-icon>add</mat-icon>
+</button>
+  <!-- <div *ngIf="taskList.length>0">
+    You chose: <i>{{taskList}}</i>
+  </div> -->
+  <app-dialog 
+  [visibilityState]="dialogVisibility"
+ (closedwithResult)="displaydialogResult($event)"
+  ></app-dialog>

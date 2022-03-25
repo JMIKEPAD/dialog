@@ -10,14 +10,26 @@ import { TaskdialogComponent } from './taskdialog/components/taskdialog.componen
 export class AppComponent {
   title = 'task-dialog';
 
+  dialogVisibility = 'visible'
+  public taskList: string[] = [];
   constructor(public dialog: MatDialog) {}
   opendialog(){
-    const dialogRef = this.dialog.open(TaskdialogComponent, {
-      width: '250px',
-    });
+    if (this.dialogVisibility === 'invisible') {
+      this.dialogVisibility = 'visible'
+    } else{
+      this.dialogVisibility = 'invisible'
+    }
+    // const dialogRef = this.dialog.open(TaskdialogComponent, {
+    //   width: '250px',
+    // });
 
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-    });
+    // dialogRef.afterClosed().subscribe(result => {
+    //   // console.log('The dialog was closed')
+    //   ;
+    // });
+  }
+  displaydialogResult(result:string){
+console.log(result);
+
   }
 }
